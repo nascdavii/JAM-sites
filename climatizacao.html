@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Climatização – JAM | Instalação, Higienização e Manutenção de Ar-Condicionado</title>
+    <meta name="description"
+        content="Técnico formado, garantia de 90 dias e orçamento transparente. A JAM instala, higieniza e mantém seu ar-condicionado. Atendimento em Salvador e região. Fale no WhatsApp." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+        /* ── Climatização page – scoped styles ── */
+
+        /* Floating transparent header */
+        body {
+            background: var(--dark-blue);
+        }
+
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 2rem);
+            max-width: 1100px;
+            z-index: 100;
+            background: rgba(0, 31, 63, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: .8rem 1.5rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border-radius: 99px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .site-header .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            color: rgba(255, 255, 255, .75);
+            text-decoration: none;
+            font-size: .875rem;
+            font-weight: 500;
+            transition: color .2s;
+        }
+
+        .site-header .back-link:hover {
+            color: #fff;
+        }
+
+        .site-header .back-link svg {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2.2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .header-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: #fff;
+            letter-spacing: -.3px;
+        }
+
+        .header-brand span {
+            color: var(--primary);
+        }
+
+        .btn-whatsapp-sm {
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+            background: #25D366;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: .8rem;
+            font-weight: 700;
+            padding: .5rem 1rem;
+            border-radius: 99px;
+            text-decoration: none;
+            transition: background .25s, transform .2s;
+        }
+
+        .btn-whatsapp-sm:hover {
+            background: #1fba58;
+            transform: translateY(-1px);
+        }
+
+        .btn-whatsapp-sm svg {
+            width: 16px;
+            height: 16px;
+            fill: #fff;
+            flex-shrink: 0;
+        }
+
+        /* ── Sections shared ── */
+        .lp-section {
+            padding: 4.5rem 1.5rem;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: .75rem;
+            font-weight: 500;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: .75rem;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.25rem, 3vw, 1.85rem);
+            font-weight: 700;
+            color: var(--dark-blue);
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+        }
+
+        .prose {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #4b5563;
+        }
+
+        .prose p+p {
+            margin-top: 1rem;
+        }
+
+        .prose strong {
+            color: var(--dark-blue);
+            font-weight: 500;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            padding: 8rem 1.5rem 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: var(--dark-blue);
+            /* Fallback */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(4px) brightness(0.4);
+            transform: scale(1.1);
+            /* Prevent white edges from blur */
+            z-index: 1;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        /* Decorative circle */
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: rgba(0, 123, 255, .08);
+            top: -120px;
+            right: -120px;
+            pointer-events: none;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            background: rgba(255, 255, 255, .12);
+            color: rgba(255, 255, 255, .8);
+            font-size: .75rem;
+            font-weight: 500;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            padding: .35rem 1rem;
+            border-radius: 99px;
+            margin-bottom: 1.75rem;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.65rem, 4.5vw, 2.75rem);
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 1.25rem;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-sub {
+            font-size: clamp(.95rem, 2vw, 1.1rem);
+            color: rgba(255, 255, 255, .75);
+            line-height: 1.7;
+            max-width: 580px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: .6rem;
+            background: #25D366;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: .9rem 2rem;
+            border-radius: 99px;
+            text-decoration: none;
+            box-shadow: 0 6px 24px rgba(37, 211, 102, .35);
+            transition: background .25s, transform .2s, box-shadow .25s;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1fba58;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 32px rgba(37, 211, 102, .45);
+        }
+
+        .btn-whatsapp svg {
+            width: 22px;
+            height: 22px;
+            fill: #fff;
+            flex-shrink: 0;
+        }
+
+        /* Hero trust pills */
+        .hero-trust {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: .6rem;
+            margin-top: 1.25rem;
+        }
+
+        .hero-trust span {
+            font-size: .8rem;
+            color: rgba(255, 255, 255, .6);
+            display: inline-flex;
+            align-items: center;
+            gap: .35rem;
+        }
+
+        .hero-trust span::before {
+            content: '✓';
+            color: #25D366;
+            font-weight: 700;
+        }
+
+        /* ── DOR (Dobra 2) ── */
+        .section-dor {
+            background: var(--gray-bg);
+        }
+
+        /* ── VIRADA + STATS (Dobra 3) ── */
+        .section-virada {
+            background: var(--white);
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: var(--dark-blue);
+            border-radius: 1rem;
+            padding: 1.75rem 1.5rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: .5rem;
+        }
+
+        .stat-desc {
+            font-size: .82rem;
+            color: rgba(255, 255, 255, .7);
+            line-height: 1.5;
+        }
+
+        /* ── AUTORIDADE (Dobra 4) ── */
+        .section-autoridade {
+            background: var(--gray-bg);
+        }
+
+        .autoridade-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 600px) {
+            .autoridade-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Left – pillar list */
+        .pilares-lista {
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+        }
+
+        .pilar-item {
+            display: flex;
+            gap: .9rem;
+            align-items: flex-start;
+            background: var(--white);
+            border-radius: .875rem;
+            padding: 1.1rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .pilar-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: .5rem;
+            background: var(--light-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .pilar-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: var(--primary);
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .pilar-texto h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: .9rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: .25rem;
+        }
+
+        .pilar-texto p {
+            font-size: .82rem;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        /* Right – narrative block */
+        .autoridade-narrativa {
+            background: var(--dark-blue);
+            border-radius: 1rem;
+            padding: 2rem 1.75rem;
+            color: rgba(255, 255, 255, .75);
+        }
+
+        .autoridade-narrativa .section-title {
+            color: #fff;
+            margin-bottom: 1.25rem;
+        }
+
+        .autoridade-narrativa p {
+            font-size: .95rem;
+            line-height: 1.75;
+        }
+
+        .autoridade-narrativa p+p {
+            margin-top: .85rem;
+        }
+
+        .autoridade-narrativa strong {
+            color: #fff;
+        }
+
+        .credencial-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .6rem;
+            margin-top: 1.25rem;
+        }
+
+        .credencial-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+            background: rgba(255, 255, 255, .1);
+            border: 1px solid rgba(255, 255, 255, .18);
+            color: rgba(255, 255, 255, .85);
+            font-size: .8rem;
+            font-weight: 500;
+            padding: .4rem .85rem;
+            border-radius: 99px;
+        }
+
+        .credencial-badge svg {
+            width: 14px;
+            height: 14px;
+            fill: none;
+            stroke: var(--accent);
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* ── SERVIÇOS (Dobra 5) ── */
+        .section-servicos {
+            background: var(--white);
+        }
+
+        .servicos-subtitulo {
+            font-size: .95rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 500px) {
+            .servicos-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .servico-card {
+            background: var(--gray-bg);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border-top: 3px solid var(--primary);
+            transition: box-shadow .25s, transform .25s;
+        }
+
+        .servico-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-3px);
+        }
+
+        .servico-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: .75rem;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .servico-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: none;
+            stroke: var(--primary);
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .servico-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: .5rem;
+        }
+
+        .servico-card p {
+            font-size: .875rem;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* ── CONEXÃO (Dobra 6) ── */
+        .section-conexao {
+            background: var(--gray-bg);
+        }
+
+        .prova-quote {
+            background: var(--white);
+            border-radius: 1rem;
+            padding: 2rem 1.75rem;
+            margin-top: 1.75rem;
+            position: relative;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .prova-quote::before {
+            content: '"';
+            position: absolute;
+            top: -1rem;
+            left: 1.5rem;
+            font-size: 5rem;
+            line-height: 1;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: var(--light-blue);
+        }
+
+        .prova-quote p {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: #4b5563;
+            position: relative;
+            z-index: 1;
+        }
+
+        .prova-quote p+p {
+            margin-top: .85rem;
+        }
+
+        .prova-assinatura {
+            margin-top: 1.25rem;
+            font-size: .8rem;
+            font-weight: 500;
+            color: var(--primary);
+            letter-spacing: .06em;
+            text-transform: uppercase;
+        }
+
+        /* ── FAQ ── */
+        .section-faq {
+            background: var(--white);
+        }
+
+        .faq-list {
+            margin-top: 2rem;
+            border-top: 1px solid var(--gray-border);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--gray-border);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 1.25rem 0;
+            background: none;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .faq-icon {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+
+        .faq-icon::before,
+        .faq-icon::after {
+            content: '';
+            position: absolute;
+            background-color: var(--primary);
+            transition: transform .25s ease;
+        }
+
+        .faq-icon::before {
+            width: 2px;
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .faq-icon::after {
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .faq-item.active .faq-icon::before {
+            transform: translateX(-50%) rotate(90deg);
+        }
+
+        .faq-item.active .faq-icon::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s ease-out;
+        }
+
+        .faq-answer-inner {
+            padding-bottom: 1.25rem;
+            font-size: .95rem;
+            line-height: 1.6;
+            color: #6b7280;
+        }
+
+        /* ── CTA FINAL (Dobra 7) ── */
+        .section-cta-final {
+            background: linear-gradient(160deg, var(--dark-blue), #003a75);
+            text-align: center;
+        }
+
+        .section-cta-final .section-label {
+            color: var(--accent);
+        }
+
+        .section-cta-final .section-title {
+            color: #fff;
+        }
+
+        .cta-intro {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, .72);
+            max-width: 540px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-intro strong {
+            color: #fff;
+        }
+
+        .cta-bullets {
+            list-style: none;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .cta-bullets li {
+            font-size: .95rem;
+            color: rgba(255, 255, 255, .7);
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .cta-bullets li::before {
+            content: '';
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .cta-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: .75rem;
+            margin-top: 1.5rem;
+        }
+
+        .cta-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+            background: rgba(255, 255, 255, .1);
+            color: rgba(255, 255, 255, .8);
+            font-size: .8rem;
+            font-weight: 500;
+            padding: .4rem .9rem;
+            border-radius: 99px;
+        }
+
+        .cta-badge svg {
+            width: 14px;
+            height: 14px;
+            fill: none;
+            stroke: var(--accent);
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* ── Footer ── */
+        .site-footer {
+            background: #001025;
+            color: rgba(255, 255, 255, .45);
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, .85);
+            margin-bottom: .5rem;
+        }
+
+        .footer-sub {
+            font-size: .8rem;
+            line-height: 1.6;
+        }
+
+        .footer-motto {
+            margin-top: 1rem;
+            font-size: .8rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, .3);
+        }
+
+        /* ── Floating CTA ── */
+        .btn-whatsapp-float {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            background: #25D366;
+            color: #fff;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            transition: transform .2s ease;
+        }
+
+        .btn-whatsapp-float:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-whatsapp-float svg {
+            width: 28px;
+            height: 28px;
+            fill: #fff;
+            stroke: none;
+        }
+
+        /* ── Scroll animations ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity .55s var(--ease), transform .55s var(--ease);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-item {
+            transition-delay: .1s;
+            /* Base delay for staggered items */
+        }
+
+        .stagger-item:nth-child(2) {
+            transition-delay: .2s;
+        }
+
+        .stagger-item:nth-child(3) {
+            transition-delay: .3s;
+        }
+
+        .stagger-item:nth-child(4) {
+            transition-delay: .4s;
+        }
+
+        .stagger-item:nth-child(5) {
+            transition-delay: .5s;
+        }
+
+        .stagger-item:nth-child(6) {
+            transition-delay: .6s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── Header ── -->
+    <header class="site-header">
+        <a class="back-link" href="index.html" aria-label="Voltar ao menu">
+            <svg viewBox="0 0 16 16">
+                <polyline points="11 3 5 8 11 13" />
+            </svg>
+            Menu
+        </a>
+        <span class="header-brand">JAM <span>Climatização</span></span>
+        <a class="btn-whatsapp-sm"
+            href="https://wa.me/55XXXXXXXXXXX?text=Olá!%20Gostaria%20de%20um%20orçamento%20de%20climatização."
+            target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                <path
+                    d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.529 5.845L0 24l6.337-1.507A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.375l-.359-.214-3.724.886.912-3.629-.234-.373A9.81 9.81 0 012.182 12C2.182 6.577 6.577 2.182 12 2.182S21.818 6.577 21.818 12 17.423 21.818 12 21.818z" />
+            </svg>
+            WhatsApp
+        </a>
+    </header>
+
+    <main>
+
+        <!-- ── DOBRA 1 – HERO ── -->
+        <section class="hero" aria-label="Apresentação Climatização">
+            <div class="hero-bg" style="background-image: url('./images/hero-climatizacao.png');"></div>
+            <div class="container">
+
+                <span class="hero-eyebrow">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" style="flex-shrink:0">
+                        <circle cx="5" cy="5" r="5" fill="rgba(255,255,255,0.5)" />
+                    </svg>
+                    Especialistas em Climatização
+                </span>
+                <h1>Ar-condicionado ligado, mas sem refrescar? Isso tem conserto.</h1>
+                <p class="hero-sub" style="font-size: 1.15rem; font-weight: 500;">
+                    Instalação, higienização e manutenção de ar-condicionado com diagnóstico no mesmo dia e garantia de
+                    90 dias.
+                </p>
+                <a class="btn-whatsapp"
+                    style="background: var(--btn-green); box-shadow: 0 6px 24px rgba(37, 211, 102, .4);"
+                    href="https://wa.me/55XXXXXXXXXXX?text=Olá!%20Preciso%20de%20ajuda%20com%20um%20eletrodoméstico."
+                    target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                        <path
+                            d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.529 5.845L0 24l6.337-1.507A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.375l-.359-.214-3.724.886.912-3.629-.234-.373A9.81 9.81 0 012.182 12C2.182 6.577 6.577 2.182 12 2.182S21.818 6.577 21.818 12 17.423 21.818 12 21.818z" />
+                    </svg>
+                    Falar com a JAM agora
+                </a>
+            </div>
+        </section>
+
+        <!-- ── DOBRA 1.5 – MARCAS ── -->
+        <section class="section-marcas" aria-label="Marcas Atendidas">
+            <div class="marquee-wrapper">
+                <div class="marquee-content" aria-hidden="true">
+                    <span>Springer</span>
+                    <span>Midea</span>
+                    <span>LG</span>
+                    <span>Samsung</span>
+                    <span>Consul</span>
+                    <span>Fujitsu</span>
+                    <span>Daikin</span>
+                    <span>Gree</span>
+                </div>
+                <!-- Dubbed for seamless loop -->
+                <div class="marquee-content" aria-hidden="true">
+                    <span>Springer</span>
+                    <span>Midea</span>
+                    <span>LG</span>
+                    <span>Samsung</span>
+                    <span>Consul</span>
+                    <span>Fujitsu</span>
+                    <span>Daikin</span>
+                    <span>Gree</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── DOBRA 2 – PROBLEMAS (Grid) ── -->
+        <section class="lp-section section-problemas" aria-label="Identifique seu problema"
+            style="background: var(--gray-bg);">
+            <div class="container reveal stagger-item">
+                <div class="cards" style="margin: 0 auto;">
+
+                    <div class="card">
+                        <div class="card-icon" style="font-size: 2rem; background: transparent;">🌬️</div>
+                        <h3 class="card-title">Ar fraco ou quente?</h3>
+                        <p class="card-desc">Limpeza profunda dos filtros e evaporadora para devolver a potência total
+                            do seu aparelho.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon" style="font-size: 2rem; background: transparent;">💧</div>
+                        <h3 class="card-title">Cheiro estranho ao ligar?</h3>
+                        <p class="card-desc">Higienização completa que elimina bactérias, mofo e odores do interior do
+                            aparelho.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon" style="font-size: 2rem; background: transparent;">🔊</div>
+                        <h3 class="card-title">Barulho ou vibração?</h3>
+                        <p class="card-desc">Diagnóstico preciso para identificar a causa e resolver com peças originais
+                            e garantia.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ── VIRADA DE PERSPECTIVA ── -->
+        <section class="lp-section section-virada reveal" aria-label="Virada de perspectiva"
+            style="background: var(--dark-blue);">
+            <div class="container" style="text-align: center; max-width: 680px;">
+                <p class="section-label" style="color: var(--cyan);">Sabia disso?</p>
+                <h2 class="section-title" style="color: #fff;">Ar-condicionado sujo não é só ineficiente.<br>É um risco
+                    para quem respira.</h2>
+                <p style="color: rgba(255,255,255,.75); font-size: 1.05rem; line-height: 1.7; margin-bottom: 2.5rem;">
+                    O filtro acumula poeira, fungos e bactérias em semanas. Quando o aparelho liga,
+                    tudo isso vai direto para o ar da sua sala — ou do seu filho dormindo.
+                    A manutenção regular não existe para gastar dinheiro.
+                    <strong style="color:#fff;">Existe para que o aparelho entregue o que prometeu.</strong>
+                </p>
+                <div class="virada-stats">
+                    <div class="virada-stat">
+                        <span class="virada-number">+40%</span>
+                        <span class="virada-label">redução no consumo de energia com aparelho limpo</span>
+                    </div>
+                    <div class="virada-stat">
+                        <span class="virada-number">100%</span>
+                        <span class="virada-label">transparência — você aprova antes de qualquer serviço</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── DOBRA 3 – QUEM VAI ATÉ VOCÊ (Split 50/50) ── -->
+        <section class="lp-section section-autoridade" aria-label="Nossa Equipe" style="background: var(--white);">
+            <div class="container reveal">
+                <div class="split-layout">
+                    <div class="split-text-content stagger-item">
+                        <p class="section-label" style="color: var(--primary);">Quem vai até você</p>
+                        <h2 class="section-title" style="margin-bottom: 0; color: var(--dark-blue);">Técnico com nome,
+                            formação e uniforme.</h2>
+                        <ul class="bullet-list">
+                            <li class="bullet-item">
+                                <span class="bullet-icon">✅</span>
+                                <span><strong>Segurança:</strong> Identificação total e respeito à sua casa.</span>
+                            </li>
+                            <li class="bullet-item">
+                                <span class="bullet-icon">✅</span>
+                                <span><strong>Expertise:</strong> Técnicos formados e especializados nas grandes
+                                    marcas.</span>
+                            </li>
+                            <li class="bullet-item">
+                                <span class="bullet-icon">✅</span>
+                                <span><strong>Limpeza:</strong> Garantimos a organização do local pós-serviço.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="split-image-content stagger-item">
+                        <img src="./images/tecnico_profissional.png" alt="Técnico Profissional JAM"
+                            style="aspect-ratio: 4/5; object-position: top; background: var(--cyan);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── DOBRA 5 – SERVIÇOS ── -->
+        <section class="lp-section section-servicos" aria-label="Serviços JAM" style="background: var(--gray-bg);">
+            <div class="container reveal">
+                <p class="section-label text-center">O que a JAM faz pelo seu ar-condicionado</p>
+                <h2 class="section-title text-center" style="color: var(--dark-blue);">Do primeiro dia de uso até anos
+                    depois</h2>
+                <div class="servicos-grid stagger-item">
+                    <div class="servico-card">
+                        <span class="servico-icon">🔧</span>
+                        <div>
+                            <strong>Instalação</strong>
+                            <p>Posicionamento, fixação, teste de funcionamento e orientação de uso — tudo incluso.</p>
+                        </div>
+                    </div>
+                    <div class="servico-card">
+                        <span class="servico-icon">🧹</span>
+                        <div>
+                            <strong>Manutenção e Limpeza</strong>
+                            <p>Filtros, serpentinas, bandeja de condensado. O aparelho volta a climatizar como deveria.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="servico-card">
+                        <span class="servico-icon">🌿</span>
+                        <div>
+                            <strong>Higienização</strong>
+                            <p>Remoção de fungos, bactérias e ácaros do interior. O ar que você respira começa aqui.</p>
+                        </div>
+                    </div>
+                    <div class="servico-card">
+                        <span class="servico-icon">❄️</span>
+                        <div>
+                            <strong>Recarga de Gás</strong>
+                            <p>Aparelho gelando menos? A JAM identifica, corrige e testa antes de sair.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── DOBRA 6 – CONEXÃO ── -->
+        <section class="lp-section section-conexao" aria-label="Nossa reputação" style="background: var(--white);">
+            <div class="container reveal" style="max-width: 640px; text-align: center;">
+                <p class="section-label">Quem somos</p>
+                <h2 class="section-title" style="color: var(--dark-blue);">Não somos a empresa que some depois que
+                    instala.</h2>
+                <p style="color: var(--gray-mid); font-size: 1.05rem; line-height: 1.75; margin-bottom: 1.5rem;">
+                    Tem um tipo de instalador que prende o aparelho na parede, liga uma vez pra mostrar que funciona e
+                    some.
+                    Seis meses depois o gás acabou, o suporte soltou — e o número não atende.
+                </p>
+                <p style="color: var(--gray-text); font-size: 1.05rem; line-height: 1.75;">
+                    A JAM não funciona assim. Nossa reputação é construída chamada por chamada,
+                    cliente que recomenda porque confiou e foi bem atendido.
+                    <strong>Esse é o único marketing que a gente leva a sério.</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- ── DOBRA 4 – COMPARATIVO ── -->
+        <section class="lp-section section-comparativo" aria-label="Diferenciais da JAM"
+            style="background: var(--dark-blue);">
+            <div class="container reveal stagger-item">
+                <p class="section-label text-center" style="color: var(--cyan);">Compare e decida</p>
+                <h2 class="section-title text-center" style="color: #fff; margin-bottom: 3rem;">Por que escolher a JAM?
+                </h2>
+
+                <div class="comparison-container">
+                    <div class="comp-row">
+                        <div class="comp-header">Critério</div>
+                        <div class="comp-header comp-header-jam">A JAM</div>
+                        <div class="comp-header comp-header-outros">Outros Técnicos</div>
+                    </div>
+
+                    <div class="comp-row">
+                        <div class="comp-cell comp-cell-label">Garantia</div>
+                        <div class="comp-cell">
+                            <span class="icon-check">✓</span>
+                            <span>90 dias certificada</span>
+                        </div>
+                        <div class="comp-cell">
+                            <span class="icon-cross">✗</span>
+                            <span style="color: var(--gray-mid);">Promessa verbal</span>
+                        </div>
+                    </div>
+
+                    <div class="comp-row">
+                        <div class="comp-cell comp-cell-label">Comodidade</div>
+                        <div class="comp-cell">
+                            <span class="icon-check">✓</span>
+                            <span>Empréstimo de refrigerador</span>
+                        </div>
+                        <div class="comp-cell">
+                            <span class="icon-cross">✗</span>
+                            <span style="color: var(--gray-mid);">Fica sem onde guardar alimentos</span>
+                        </div>
+                    </div>
+
+                    <div class="comp-row">
+                        <div class="comp-cell comp-cell-label">Transparência</div>
+                        <div class="comp-cell">
+                            <span class="icon-check">✓</span>
+                            <span>Orçamento detalhado e sério</span>
+                        </div>
+                        <div class="comp-cell">
+                            <span class="icon-cross">✗</span>
+                            <span style="color: var(--gray-mid);">Preços variáveis e sem critério</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── FAQ ── -->
+        <section class="lp-section section-faq" aria-label="Perguntas Frequentes">
+            <div class="container reveal">
+                <p class="section-label text-center">Tire suas dúvidas</p>
+                <h2 class="section-title text-center">Perguntas Frequentes</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            A garantia cobre o quê?
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Oferecemos garantia real e certificada de 90 dias para todos os serviços prestados e
+                                peças substituídas, respeitando integralmente o Código de Defesa do Consumidor.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Qual o tempo de atendimento?
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Priorizamos a rapidez. Na grande maioria dos casos, conseguimos agendar a visita técnica
+                                para o mesmo dia ou, no máximo, para o dia útil seguinte, dependendo da sua urgência e
+                                localização.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Quais as formas de pagamento?
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Aceitamos PIX, dinheiro e cartões de crédito/débito. O pagamento pode ser facilitado no
+                                cartão. Consulte-nos pelo WhatsApp para condições de parcelamento.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── CTA FINAL (Dobra 7) ── -->
+        <section class="lp-section section-cta-final" aria-label="Chamada para ação final">
+            <div class="container reveal" style="text-align:center;">
+                <p class="section-label">Sem compromisso</p>
+                <h2 class="section-title">Seu ar-condicionado está te atendendo ou só te fazendo companhia?</h2>
+                <div class="cta-intro">
+                    <ul class="cta-bullets">
+                        <li>Está ligado mas o ambiente não refresca</li>
+                        <li>Tem cheiro estranho quando liga</li>
+                        <li>O barulho aumentou nos últimos meses</li>
+                    </ul>
+                    <p>Manda uma mensagem agora, sem compromisso. A gente faz o diagnóstico, te diz o que está errado e
+                        quanto custa resolver.</p>
+                    <p><strong>Você decide se quer seguir. Simples assim.</strong></p>
+                </div>
+                <a class="btn-whatsapp"
+                    href="https://wa.me/55XXXXXXXXXXX?text=Olá!%20Quero%20um%20diagnóstico%20do%20meu%20ar-condicionado."
+                    target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                        <path
+                            d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.529 5.845L0 24l6.337-1.507A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.375l-.359-.214-3.724.886.912-3.629-.234-.373A9.81 9.81 0 012.182 12C2.182 6.577 6.577 2.182 12 2.182S21.818 6.577 21.818 12 17.423 21.818 12 21.818z" />
+                    </svg>
+                    Falar com a JAM no WhatsApp
+                </a>
+                <div class="cta-badges">
+                    <span class="cta-badge">
+                        <svg viewBox="0 0 16 16">
+                            <polyline points="3 8 6 11 13 4" />
+                        </svg>
+                        Atendimento rápido
+                    </span>
+                    <span class="cta-badge">
+                        <svg viewBox="0 0 16 16">
+                            <polyline points="3 8 6 11 13 4" />
+                        </svg>
+                        Orçamento sem surpresa
+                    </span>
+                    <span class="cta-badge">
+                        <svg viewBox="0 0 16 16">
+                            <polyline points="3 8 6 11 13 4" />
+                        </svg>
+                        Garantia no serviço
+                    </span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ── Footer ── -->
+    <footer class="site-footer">
+        <p class="footer-brand">JAM Refrigeração e Climatização</p>
+        <p class="footer-sub">Técnicos formados · Credenciados · Com garantia</p>
+        <p class="footer-motto">"Todo mundo merece se sentir confortável em casa."</p>
+    </footer>
+
+    <!-- ── Floating CTA ── -->
+    <a href="https://wa.me/55XXXXXXXXXXX?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita." class="btn-whatsapp-float"
+        target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+            <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.529 5.845L0 24l6.337-1.507A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.375l-.359-.214-3.724.886.912-3.629-.234-.373A9.81 9.81 0 012.182 12C2.182 6.577 6.577 2.182 12 2.182S21.818 6.577 21.818 12 17.423 21.818 12 21.818z" />
+        </svg>
+    </a>
+
+    <!-- ── Scroll reveal & FAQ Script ── -->
+    <script>
+        // Reveal animation
+        const observer = new IntersectionObserver(
+            (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
+            { threshold: 0.12 }
+        );
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const answer = button.nextElementSibling;
+                const isOpen = item.classList.contains('active');
+
+                // Close all others
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                });
+
+                // Toggle current
+                if (!isOpen) {
+                    item.classList.add('active');
+                    button.setAttribute('aria-expanded', 'true');
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
