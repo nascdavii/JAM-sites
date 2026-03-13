@@ -33,7 +33,7 @@
             width: calc(100% - 2rem);
             max-width: 1100px;
             z-index: 100;
-            background: rgba(0, 31, 63, 0.4);
+            background: rgba(0, 31, 63, 0.82);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             padding: .8rem 1.5rem;
@@ -41,9 +41,9 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
             border-radius: 99px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
         }
 
         @media (max-width: 600px) {
@@ -129,8 +129,10 @@
 
         @media (max-width: 600px) {
             .btn-whatsapp-sm {
-                font-size: 0; /* Esconde texto WhatsApp no mobile */
-                padding: .5rem;
+                padding: .5rem !important;
+            }
+            .btn-whatsapp-sm .btn-text {
+                display: none;
             }
         }
 
@@ -655,30 +657,31 @@
         .faq-icon::after {
             content: '';
             position: absolute;
-            background-color: var(--primary);
-            transition: transform .25s ease;
+            background: var(--primary);
+            border-radius: 2px;
+            transition: transform .3s ease;
         }
 
         .faq-icon::before {
-            width: 2px;
-            height: 100%;
-            left: 50%;
-            transform: translateX(-50%);
+            top: 9px;
+            left: 0;
+            right: 0;
+            height: 2px;
         }
 
         .faq-icon::after {
-            width: 100%;
-            height: 2px;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 0;
+            bottom: 0;
+            left: 9px;
+            width: 2px;
         }
 
-        .faq-item.active .faq-icon::before {
-            transform: translateX(-50%) rotate(90deg);
+        .faq-item.active .faq-icon {
+            transform: rotate(90deg);
         }
 
         .faq-item.active .faq-icon::after {
-            transform: translateY(-50%) rotate(180deg);
+            transform: rotate(90deg) scaleY(0);
         }
 
         .faq-answer {
@@ -737,14 +740,16 @@
             gap: .5rem;
         }
 
-        .cta-bullets li::before {
-            content: '';
-            display: inline-block;
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: var(--primary);
+        .cta-bullets-icon {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: var(--primary);
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
             flex-shrink: 0;
+            margin-right: 2px;
         }
 
         .cta-badges {
@@ -775,34 +780,6 @@
             stroke-width: 2;
             stroke-linecap: round;
             stroke-linejoin: round;
-        }
-
-        /* ── Footer ── */
-        .site-footer {
-            background: #001025;
-            color: rgba(255, 255, 255, .45);
-            padding: 2rem 1.5rem;
-            text-align: center;
-        }
-
-        .footer-brand {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            font-weight: 700;
-            color: rgba(255, 255, 255, .85);
-            margin-bottom: .5rem;
-        }
-
-        .footer-sub {
-            font-size: .8rem;
-            line-height: 1.6;
-        }
-
-        .footer-motto {
-            margin-top: 1rem;
-            font-size: .8rem;
-            font-style: italic;
-            color: rgba(255, 255, 255, .3);
         }
 
         /* ── Floating CTA ── */
@@ -893,7 +870,7 @@
                 <path
                     d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.529 5.845L0 24l6.337-1.507A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.375l-.359-.214-3.724.886.912-3.629-.234-.373A9.81 9.81 0 012.182 12C2.182 6.577 6.577 2.182 12 2.182S21.818 6.577 21.818 12 17.423 21.818 12 21.818z" />
             </svg>
-            WhatsApp
+            <span class="btn-text">WhatsApp</span>
         </a>
     </header>
 
@@ -1157,20 +1134,23 @@
 
         <!-- ── DOBRA 6 – CONEXÃO ── -->
         <section class="lp-section section-conexao" aria-label="Nossa reputação" style="background: var(--white);">
-            <div class="container reveal" style="max-width: 640px; text-align: center;">
-                <p class="section-label">Quem somos</p>
-                <h2 class="section-title" style="color: var(--dark-blue);">Não somos a empresa que some depois que
-                    instala.</h2>
-                <p style="color: var(--gray-mid); font-size: 1.05rem; line-height: 1.75; margin-bottom: 1.5rem;">
-                    Tem um tipo de instalador que prende o aparelho na parede, liga uma vez pra mostrar que funciona e
-                    some.
-                    Seis meses depois o gás acabou, o suporte soltou — e o número não atende.
-                </p>
-                <p style="color: var(--gray-text); font-size: 1.05rem; line-height: 1.75;">
-                    A JAM não funciona assim. Nossa reputação é construída chamada por chamada,
-                    cliente que recomenda porque confiou e foi bem atendido.
-                    <strong>Esse é o único marketing que a gente leva a sério.</strong>
-                </p>
+            <div class="container reveal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 3rem; justify-content: center; max-width: 1000px; margin: 0 auto;">
+                <div style="flex: 1; min-width: 280px; display: flex; justify-content: center;">
+                    <img src="https://i.imgur.com/J3ZAuv4.png" alt="Logo JAM Refrigeração e Climatização" style="width: 100%; max-width: 320px; height: auto; object-fit: contain;">
+                </div>
+                <div style="flex: 1.5; min-width: 300px;">
+                    <p class="section-label" style="text-align: left;">Quem somos</p>
+                    <h2 class="section-title" style="color: var(--dark-blue); text-align: left; margin-bottom: 1.5rem;">Não somos a empresa que some depois que instala.</h2>
+                    <p style="color: var(--gray-mid); font-size: 1.05rem; line-height: 1.75; margin-bottom: 1.5rem;">
+                        Tem um tipo de instalador que prende o aparelho na parede, liga uma vez pra mostrar que funciona e some.
+                        Seis meses depois o gás acabou, o suporte soltou — e o número não atende.
+                    </p>
+                    <p style="color: var(--gray-text); font-size: 1.05rem; line-height: 1.75;">
+                        A JAM não funciona assim. Nossa reputação é construída chamada por chamada,
+                        cliente que recomenda porque confiou e foi bem atendido.
+                        <strong>Esse é o único marketing que a gente leva a sério.</strong>
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -1183,47 +1163,83 @@
                 </h2>
 
                 <div class="comparison-container">
-                    <div class="comp-row">
-                        <div class="comp-header">Critério</div>
-                        <div class="comp-header comp-header-jam">A JAM</div>
-                        <div class="comp-header comp-header-outros">Outros Técnicos</div>
+
+                    <!-- Coluna JAM -->
+                    <div class="comp-col comp-col-jam">
+                        <div class="comp-col-header">
+                            <span class="comp-col-header-dot"></span>
+                            A JAM
+                        </div>
+
+                        <div class="comp-item">
+                            <div class="comp-icon">
+                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <div class="comp-item-text">
+                                <span class="comp-item-label">Garantia</span>
+                                <span class="comp-item-value">90 dias certificada</span>
+                            </div>
+                        </div>
+
+                        <div class="comp-item">
+                            <div class="comp-icon">
+                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <div class="comp-item-text">
+                                <span class="comp-item-label">Atendimento</span>
+                                <span class="comp-item-value">Diagnóstico no mesmo dia</span>
+                            </div>
+                        </div>
+
+                        <div class="comp-item">
+                            <div class="comp-icon">
+                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <div class="comp-item-text">
+                                <span class="comp-item-label">Transparência</span>
+                                <span class="comp-item-value">Orçamento detalhado e sério</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="comp-row">
-                        <div class="comp-cell comp-cell-label">Garantia</div>
-                        <div class="comp-cell">
-                            <span class="icon-check">✓</span>
-                            <span>90 dias certificada</span>
+                    <!-- Coluna Outros -->
+                    <div class="comp-col comp-col-outros">
+                        <div class="comp-col-header">
+                            <span class="comp-col-header-dot"></span>
+                            Outros Técnicos
                         </div>
-                        <div class="comp-cell">
-                            <span class="icon-cross">✗</span>
-                            <span style="color: var(--gray-mid);">Promessa verbal</span>
+
+                        <div class="comp-item">
+                            <div class="comp-icon">
+                                <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            </div>
+                            <div class="comp-item-text">
+                                <span class="comp-item-label">Garantia</span>
+                                <span class="comp-item-value">Promessa verbal</span>
+                            </div>
+                        </div>
+
+                        <div class="comp-item">
+                            <div class="comp-icon">
+                                <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            </div>
+                            <div class="comp-item-text">
+                                <span class="comp-item-label">Atendimento</span>
+                                <span class="comp-item-value">Prazo incerto, sem retorno</span>
+                            </div>
+                        </div>
+
+                        <div class="comp-item">
+                            <div class="comp-icon">
+                                <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            </div>
+                            <div class="comp-item-text">
+                                <span class="comp-item-label">Transparência</span>
+                                <span class="comp-item-value">Preços variáveis e sem critério</span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="comp-row">
-                        <div class="comp-cell comp-cell-label">Comodidade</div>
-                        <div class="comp-cell">
-                            <span class="icon-check">✓</span>
-                            <span>Empréstimo de refrigerador</span>
-                        </div>
-                        <div class="comp-cell">
-                            <span class="icon-cross">✗</span>
-                            <span style="color: var(--gray-mid);">Fica sem onde guardar alimentos</span>
-                        </div>
-                    </div>
-
-                    <div class="comp-row">
-                        <div class="comp-cell comp-cell-label">Transparência</div>
-                        <div class="comp-cell">
-                            <span class="icon-check">✓</span>
-                            <span>Orçamento detalhado e sério</span>
-                        </div>
-                        <div class="comp-cell">
-                            <span class="icon-cross">✗</span>
-                            <span style="color: var(--gray-mid);">Preços variáveis e sem critério</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -1282,9 +1298,18 @@
                 <h2 class="section-title">Seu ar-condicionado está te atendendo ou só te fazendo companhia?</h2>
                 <div class="cta-intro">
                     <ul class="cta-bullets">
-                        <li>Está ligado mas o ambiente não refresca</li>
-                        <li>Tem cheiro estranho quando liga</li>
-                        <li>O barulho aumentou nos últimos meses</li>
+                        <li>
+                            <svg viewBox="0 0 24 24" class="cta-bullets-icon"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Está ligado mas o ambiente não refresca
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" class="cta-bullets-icon"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            Tem cheiro estranho quando liga
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" class="cta-bullets-icon"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            O barulho aumentou nos últimos meses
+                        </li>
                     </ul>
                     <p>Manda uma mensagem agora, sem compromisso. A gente faz o diagnóstico, te diz o que está errado e
                         quanto custa resolver.</p>
@@ -1328,9 +1353,81 @@
 
     <!-- ── Footer ── -->
     <footer class="site-footer">
-        <p class="footer-brand">JAM Refrigeração e Climatização</p>
-        <p class="footer-sub">Técnicos formados · Credenciados · Com garantia</p>
-        <p class="footer-motto">"Todo mundo merece se sentir confortável em casa."</p>
+        <div class="footer-top">
+
+            <!-- Coluna 1 – Marca -->
+            <div class="footer-brand-col">
+                <p class="footer-logo-name">JAM <span>Climatização</span></p>
+                <p class="footer-tagline">Técnicos formados · Com garantia</p>
+                <p class="footer-motto-text">"Todo mundo merece se sentir confortável em casa — com um técnico de confiança ao lado."</p>
+                <a class="footer-whatsapp-link"
+                    href="https://wa.me/5571993302374?text=Olá!%20Preciso%20de%20mais%20informações%20sobre%20a%20JAM."
+                    target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.529 5.845L0 24l6.337-1.507A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.375l-.359-.214-3.724.886.912-3.629-.234-.373A9.81 9.81 0 012.182 12C2.182 6.577 6.577 2.182 12 2.182S21.818 6.577 21.818 12 17.423 21.818 12 21.818z"/></svg>
+                    Falar no WhatsApp
+                </a>
+            </div>
+
+            <!-- Coluna 2 – Contato e Atendimento -->
+            <div>
+                <p class="footer-col-title">Contato & Horários</p>
+                <ul class="footer-contact-list">
+                    <li class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.1 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.45-.45a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z"/></svg>
+                        </div>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            (71) 99330-2374
+                        </div>
+                    </li>
+                    <li class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div>
+                            <strong>Horário de Atendimento</strong>
+                            Seg–Sex: 08h às 18h<br>Sáb: 08h às 13h
+                        </div>
+                    </li>
+                    <li class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <strong>Área de Atendimento</strong>
+                            Salvador e Região Metropolitana — Lauro de Freitas, Camaçari, Simões Filho e mais.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Coluna 3 – Serviços -->
+            <div>
+                <p class="footer-col-title">Serviços</p>
+                <ul class="footer-services-list">
+                    <li>Instalação de Ar-Condicionado</li>
+                    <li>Manutenção e Limpeza</li>
+                    <li>Higienização Completa</li>
+                    <li>Recarga de Gás</li>
+                    <li>Revisão Preventiva</li>
+                    <li>Reparo de Condensadora</li>
+                    <li>Atendimento Residencial e Comercial</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2025 JAM Refrigeração e Climatização. Todos os direitos reservados.</p>
+            <div class="footer-badges">
+                <span class="footer-badge">Garantia 90 dias</span>
+                <span class="footer-badge">Técnicos formados</span>
+                <span class="footer-badge">Orçamento sem surpresa</span>
+            </div>
+        </div>
     </footer>
 
     <!-- ── Floating CTA ── -->
