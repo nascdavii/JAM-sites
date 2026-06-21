@@ -4,21 +4,22 @@ import { MessageCircle } from "lucide-react";
 import { WHATSAPP_LINK_ELETRICA, PHONE_NUMBER_ELETRICA, EMAIL_ELETRICA } from "@/app/martins.eng/constants";
 
 const servicos = [
-    "Perícia Judicial",
-    "Agrimensura",
+    "Avaliação de Imóveis Urbanos",
+    "Avaliação de Imóveis Rurais",
     "Regularização Imobiliária",
-    "Eletrotécnica",
     "Levantamento Planialtimétrico",
     "Georreferenciamento",
+    "Perícia Judicial",
+    "Projetos e Instalações Elétricas",
 ];
 
 const cidades = [
     "Salvador",
     "Lauro de Freitas",
     "Camaçari",
-    "Simões Filho",
-    "Dias d'Ávila",
-    "Candeias",
+    "Maceió",
+    "Interior da Bahia",
+    "Interior de Alagoas",
 ];
 
 export default function FooterEletrica() {

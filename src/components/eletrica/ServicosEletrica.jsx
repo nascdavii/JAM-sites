@@ -1,34 +1,34 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Scale, MapPin, FileText, Compass, Ruler } from "lucide-react";
+import { Scale, FileCheck, Compass, Zap, Building2 } from "lucide-react";
 
 export default function ServicosEletrica() {
     const cards = [
         {
+            icon: <Building2 className="h-7 w-7 text-white" />,
+            title: "Engenharia Civil",
+            desc: "Projetos Residenciais, Fiscalização de Obras, Inspeção Predial e análise detalhada de Patologia das Construções.",
+        },
+        {
             icon: <Scale className="h-7 w-7 text-white" />,
-            title: "Perícia Judicial",
-            desc: "Laudos técnicos e pareceres fundamentados para processos judiciais envolvendo questões imobiliárias, possessórias e indenizatórias. Perito habilitado, documentação aceita em juízo.",
+            title: "Perícia e Avaliações",
+            desc: "Avaliação Mercadológica de Imóveis Urbanos e Rurais, Laudos Técnicos, Perícias Técnicas e Assistência Técnica Judicial.",
+        },
+        {
+            icon: <FileCheck className="h-7 w-7 text-white" />,
+            title: "Regularização Imobiliária",
+            desc: "Usucapião, Retificação de Área, Desmembramento, Unificação de Imóveis e Inventário Imobiliário.",
         },
         {
             icon: <Compass className="h-7 w-7 text-white" />,
-            title: "Agrimensura e Georreferenciamento",
-            desc: "Levantamento topográfico e georreferenciamento de propriedades rurais e urbanas com equipamentos de alta precisão, atendendo às normas do INCRA e cartórios.",
+            title: "Agrimensura",
+            desc: "Levantamento Planialtimétrico detalhado, Georreferenciamento de imóveis e serviços completos de Topografia.",
         },
         {
-            icon: <FileText className="h-7 w-7 text-white" />,
-            title: "Regularização de Imóveis",
-            desc: "Regularização fundiária de propriedades rurais e urbanas, incluindo retificação de área, desmembramento, unificação e adequação documental para registro.",
-        },
-        {
-            icon: <Ruler className="h-7 w-7 text-white" />,
-            title: "Levantamento Planialtimétrico",
-            desc: "Mapeamento completo de limites, relevo, confrontações, benfeitorias, cursos d'água e acessos — base técnica para qualquer processo de regularização.",
-        },
-        {
-            icon: <MapPin className="h-7 w-7 text-white" />,
-            title: "Laudos Técnicos e ART",
-            desc: "Elaboração de laudos técnicos com ART assinada por engenheiro especialista. Documentação aceita por cartórios, bancos e instâncias judiciais.",
+            icon: <Zap className="h-7 w-7 text-white" />,
+            title: "Eletrotécnica",
+            desc: "Projetos Elétricos, Instalações Residenciais, emissão de Laudos Elétricos e Inspeções Elétricas.",
         },
     ];
 

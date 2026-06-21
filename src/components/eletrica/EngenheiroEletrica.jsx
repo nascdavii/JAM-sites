@@ -4,18 +4,12 @@ import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 
 const bullets = [
-    {
-        title: "Perícia Judicial",
-        desc: "Assistência técnica fundamentada para demandas judiciais.",
-    },
-    {
-        title: "Agrimensura & Regularização",
-        desc: "Mapeamento e legalização de propriedades rurais e urbanas.",
-    },
-    {
-        title: "Eletrotécnica & Civil",
-        desc: "Sólida formação técnica para laudos precisos e completos.",
-    },
+    { title: "Avaliação de Imóveis Urbanos e Rurais", desc: "" },
+    { title: "Regularização Imobiliária", desc: "" },
+    { title: "Levantamentos Topográficos", desc: "" },
+    { title: "Perícias Técnicas", desc: "" },
+    { title: "Georreferenciamento", desc: "" },
+    { title: "Instalações Elétricas Residenciais", desc: "" },
 ];
 
 export default function EngenheiroEletrica() {
@@ -33,37 +27,36 @@ export default function EngenheiroEletrica() {
                         Responsabilidade Técnica
                     </span>
                     <h2 className="text-3xl md:text-5xl font-bold text-[#1B4332] mb-4 leading-tight">
-                        Eng. José Augusto Martins
+                        José Augusto Martins
                     </h2>
-                    <p className="text-xl text-[#B07D46] font-semibold mb-6">
-                        Engenharia Civil | Perícia Judicial | Agrimensura | Regularização Imobiliária | Eletrotécnica
+                    <p className="text-xl text-[#B07D46] font-semibold mb-6 leading-relaxed">
+                        Engenheiro Civil | Perito Avaliador de Imóveis | Agrimensor | Técnico em Eletrotécnica
                     </p>
                     
                     <div className="bg-[#F4F5F7] border-l-4 border-[#B07D46] p-6 rounded-r-xl mb-8 italic text-gray-600 text-lg">
-                        "Como Engenheiro Civil atuando nas áreas de Perícia Judicial, Agrimensura e Regularização Imobiliária, observo frequentemente situações em que inconsistências técnicas poderiam ter sido evitadas com um levantamento adequado realizado no momento certo."
+                        "Profissional multidisciplinar dedicado a entregar soluções completas em engenharia, perícia, agrimensura e regularização imobiliária, garantindo a segurança jurídica e a valorização do seu patrimônio."
                     </div>
 
-                    <div className="space-y-5">
+                    <div className="space-y-4 mb-8">
                         {bullets.map((item, i) => (
                             <motion.div
                                 key={i}
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: i * 0.12 }}
-                                className="flex items-start gap-4"
+                                transition={{ delay: i * 0.08 }}
+                                className="flex items-center gap-3"
                             >
-                                <CheckCircle2 className="h-6 w-6 text-green-500 shrink-0 mt-0.5" />
-                                <div>
-                                    <p className="font-bold text-[#1B4332] text-[16px]">
-                                        {item.title}
-                                    </p>
-                                    <p className="text-[#4A5568] text-[15px] leading-[1.8]">
-                                        {item.desc}
-                                    </p>
-                                </div>
+                                <CheckCircle2 className="h-5 w-5 text-green-500 shrink-0" />
+                                <p className="font-bold text-[#1B4332] text-[16px]">
+                                    {item.title}
+                                </p>
                             </motion.div>
                         ))}
+                    </div>
+
+                    <div className="inline-block bg-[#1B4332]/5 rounded-lg px-5 py-3 border border-[#1B4332]/10 text-[#1B4332] font-semibold text-sm">
+                        📍 Atendimento em todo o estado da Bahia / Alagoas
                     </div>
                 </motion.div>
 

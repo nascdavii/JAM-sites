@@ -40,10 +40,10 @@ export default function ServicosRapidosEletrica() {
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold text-[#1B4332] mb-4">
-                        O que engloba o Levantamento Planialtimétrico?
+                        Soluções Completas em Engenharia e Imóveis
                     </h2>
                     <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                        Muito além de uma simples medição de áreas, trata-se de um estudo técnico detalhado que mapeia com precisão todas as características que influenciam na situação jurídica e cadastral do imóvel:
+                        Muito além de uma simples avaliação, realizamos um estudo técnico detalhado que mapeia com precisão todas as características que influenciam na valorização e na situação jurídica do imóvel:
                     </p>
                 </div>
                 <div className="flex flex-wrap justify-center gap-4 md:gap-6">

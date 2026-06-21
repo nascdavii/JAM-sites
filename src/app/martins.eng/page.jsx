@@ -16,9 +16,9 @@ import FooterEletrica from "@/components/eletrica/FooterEletrica";
 import WhatsAppFlutuante from "@/components/eletrica/WhatsAppFlutuante";
 
 export const metadata = {
-    title: "Martins Engenharia — Perícia Judicial, Agrimensura e Regularização de Imóveis",
+    title: "Martins Engenharia e Soluções Imobiliárias",
     description:
-        "Especialistas em Regularização de Imóveis Rurais e Urbanos, Levantamento Planialtimétrico, Georreferenciamento e Perícia Judicial em Salvador e Bahia.",
+        "Engenheiro Civil especializado em Avaliação de Imóveis, Regularização Imobiliária, Agrimensura e Eletrotécnica em Salvador e Região / Alagoas e Região.",
 };
 
 export default function EletricaPage() {
