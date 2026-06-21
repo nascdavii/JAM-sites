@@ -1,29 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { motion, useInView, animate } from "framer-motion";
-
-function Counter({ to, suffix, prefix = "" }) {
-    const [value, setValue] = useState(0);
-    const ref = useRef(null);
-    const inView = useInView(ref, { once: true, margin: "-50px" });
-
-    useEffect(() => {
-        if (!inView) return;
-        const controls = animate(0, to, {
-            duration: 2,
-            ease: "easeOut",
-            onUpdate: (latest) => setValue(Math.floor(latest)),
-        });
-        return controls.stop;
-    }, [inView, to]);
-
-    return (
-        <span ref={ref}>
-            {prefix}{value}{suffix}
-        </span>
-    );
-}
+import { motion } from "framer-motion";
+import { TrendingUp, ShieldCheck, Landmark } from "lucide-react";
 
 export default function InvestimentoEletrica() {
     return (
@@ -32,7 +10,7 @@ export default function InvestimentoEletrica() {
                 <div className="w-[700px] h-[700px] bg-[#B07D46]/8 rounded-full blur-[140px]" />
             </div>
 
-            <div className="max-w-5xl mx-auto relative z-10">
+            <div className="max-w-6xl mx-auto relative z-10">
                 {/* Pill */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -69,25 +47,25 @@ export default function InvestimentoEletrica() {
                     Imóveis regularizados têm maior valor de mercado, acesso a financiamentos e segurança jurídica para qualquer tipo de transação ou sucessão.
                 </motion.p>
 
-                {/* Números grandes */}
+                {/* Benefícios Qualitativos */}
                 <div className="grid md:grid-cols-3 gap-8">
                     {[
                         {
-                            to: 60,
-                            suffix: "%",
-                            label: "das propriedades rurais têm inconsistência cadastral",
+                            icon: <TrendingUp className="h-8 w-8" />,
+                            title: "Valorização de Mercado",
+                            desc: "Um imóvel totalmente regularizado sofre uma valorização imediata e atrai compradores qualificados muito mais rápido.",
                             delay: 0.3,
                         },
                         {
-                            to: 30,
-                            suffix: "%",
-                            label: "de valorização média após regularização completa",
+                            icon: <Landmark className="h-8 w-8" />,
+                            title: "Aprovação em Financiamentos",
+                            desc: "Bancos e instituições financeiras exigem documentação técnica e legal impecável para liberar crédito e financiamento rural.",
                             delay: 0.45,
                         },
                         {
-                            to: 100,
-                            suffix: "%",
-                            label: "dos laudos aceitos em instâncias judiciais",
+                            icon: <ShieldCheck className="h-8 w-8" />,
+                            title: "Segurança Jurídica",
+                            desc: "Evite bloqueios em inventários, disputas de limites com vizinhos e litígios prolongados com laudos definitivos.",
                             delay: 0.6,
                         },
                     ].map((item, i) => (
@@ -97,12 +75,13 @@ export default function InvestimentoEletrica() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: item.delay }}
-                            className="bg-white/5 border border-white/10 rounded-2xl px-8 py-10 text-center backdrop-blur-sm"
+                            className="bg-white/5 border border-white/10 rounded-2xl px-8 py-10 text-center backdrop-blur-sm hover:bg-white/10 transition-colors duration-300"
                         >
-                            <p className="text-6xl md:text-7xl font-bold text-[#B07D46] mb-3">
-                                <Counter to={item.to} suffix={item.suffix} />
-                            </p>
-                            <p className="text-gray-300 text-lg">{item.label}</p>
+                            <div className="w-16 h-16 mx-auto bg-[#B07D46]/20 text-[#B07D46] rounded-2xl flex items-center justify-center mb-6">
+                                {item.icon}
+                            </div>
+                            <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+                            <p className="text-gray-300 text-[15px] leading-relaxed">{item.desc}</p>
                         </motion.div>
                     ))}
                 </div>
