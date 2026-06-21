@@ -23,7 +23,7 @@ export const metadata = {
 
 export default function EletricaPage() {
     return (
-        <main className="min-h-screen bg-white scroll-smooth">
+        <main className="min-h-screen w-full bg-white scroll-smooth overflow-x-hidden">
             <HeaderEletrica />
             {/* 1. Hero — chamada principal */}
             <HeroEletrica />
