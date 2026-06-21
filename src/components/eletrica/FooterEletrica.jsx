@@ -1,7 +1,7 @@
 "use client";
 
 import { MessageCircle } from "lucide-react";
-import { WHATSAPP_LINK_ELETRICA } from "@/app/martins.eng/constants";
+import { WHATSAPP_LINK_ELETRICA, PHONE_NUMBER_ELETRICA, EMAIL_ELETRICA } from "@/app/martins.eng/constants";
 
 const servicos = [
     "Perícia Judicial",
@@ -33,7 +33,7 @@ export default function FooterEletrica() {
                     <div>
                         <div className="mb-6">
                             <img
-                                src="https://i.imgur.com/djJwRJL.png"
+                                src="https://i.imgur.com/ygLJwhG.png"
                                 alt="Martins Engenharia"
                                 className="h-20 md:h-28 w-auto object-contain mix-blend-multiply"
                             />
@@ -52,7 +52,7 @@ export default function FooterEletrica() {
                         <ul className="space-y-3 text-sm">
                             <li>
                                 <span className="text-gray-400 block text-xs uppercase tracking-wider mb-0.5">
-                                    WhatsApp
+                                    WhatsApp / Telefone
                                 </span>
                                 <a
                                     href={WHATSAPP_LINK_ELETRICA}
@@ -60,8 +60,18 @@ export default function FooterEletrica() {
                                     rel="noopener noreferrer"
                                     className="hover:text-[#B07D46] transition-colors font-semibold"
                                 >
-                                    {/* TODO: substituir pelo número real */}
-                                    (00) 00000-0000
+                                    {PHONE_NUMBER_ELETRICA}
+                                </a>
+                            </li>
+                            <li>
+                                <span className="text-gray-400 block text-xs uppercase tracking-wider mb-0.5">
+                                    E-mail
+                                </span>
+                                <a
+                                    href={`mailto:${EMAIL_ELETRICA}`}
+                                    className="hover:text-[#B07D46] transition-colors font-semibold break-all"
+                                >
+                                    {EMAIL_ELETRICA}
                                 </a>
                             </li>
                             <li>

@@ -18,7 +18,7 @@ export default function Home() {
                     />
                     <div className="hidden md:block w-px h-16 bg-gray-300"></div>
                     <img
-                        src="https://i.imgur.com/djJwRJL.png"
+                        src="https://i.imgur.com/ygLJwhG.png"
                         alt="Martins Engenharia"
                         className="h-24 md:h-28 w-auto object-contain drop-shadow-md"
                     />
